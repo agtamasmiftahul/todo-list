@@ -12,5 +12,9 @@ html {
 }
 
 .checklist-button:hover {
-  cursor: default;
+  cursor: pointer;
+}
+
+.close-button:hover {
+  cursor: pointer;
 }

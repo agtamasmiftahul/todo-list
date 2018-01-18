@@ -4,6 +4,8 @@ var addCard = $(`#add-card`);
 
 var addButton = document.getElementById(`add-button`);
 var checklist = document.getElementById(`checklist`);
+var close = document.getElementById(`close`);
+var card = document.getElementsByClassName(`card`)
 
 var todolist = [];
 var todo;
@@ -25,13 +27,15 @@ function addToDo() {
 function addCards() {
   addToDo();
   var node = `
-  <div class="col s12 m3">
+  <div class="col s12 m4">
     <div class="card yellow">
-      <div class="card-content black-text">
+      <div id="${todo}" class="card-content black-text">
         <p>${todo}</p>
       </div>
       <div class="card-action grey lighten-3">
         <span class="font-bold">${deadline}</span>
+        <span class="font-bold checklist-button"><i id="checklist" class="material-icons prefix">check_circle</i></span>
+        <span class="font-bold close-button"><i id="close" class="material-icons prefix red-text">delete_forever</i></span>
       </div>
     </div>
   </div>
