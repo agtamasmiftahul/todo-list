@@ -3,6 +3,7 @@ var deadlineText = document.getElementById(`deadline`);
 var addCard = $(`#add-card`);
 
 var addButton = document.getElementById(`add-button`);
+var checklist = document.getElementById(`checklist`);
 
 var todolist = [];
 var todo;
@@ -38,4 +39,9 @@ function addCards() {
   addCard.append(node);
 }
 
+function checklistCard() {
+  checklist.style.color = `green`;
+}
+
 addButton.addEventListener(`click`, addCards);
+checklist.addEventListener(`click`, checklistCard)
